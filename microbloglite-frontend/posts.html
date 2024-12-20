@@ -1,0 +1,159 @@
+<!-- POSTS page -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+
+    <!-- Global CSS (CSS rules you want applied to all pages) -->
+    <link rel="stylesheet" href="global.css" />
+
+    <!-- Page-specific CSS -->
+    <link rel="stylesheet" href="styles.css" />
+
+
+
+    <!-- Run BEFORE page is finished loading (before window.onload): -->
+    <script src="auth.js"></script>
+    <script>
+      // If the user is NOT logged in, redirect back to the landing page (index.html)
+      if (isLoggedIn() === false) window.location.replace("index.html");
+    
+    
+  
+    </script>
+  </head>
+  <body>
+     <!-- Navbar -->
+     <nav class="navbar navbar-expand-lg navbar-dark bg-purple">
+      
+        <a class="navbar-brand fw-bold" href="posts.html">BlogLite</a>
+        
+    </nav>
+    
+    <body>
+      <div class="container py-4">
+        <div class="row">
+          <!-- Left Sidebar -->
+          <div class="col-3">
+            <div class="card overflow-hidden">
+              <div class="card-body">
+                <ul class="nav flex-column gap-3">
+                  <li class="nav-item">
+                    <a class="nav-link text-dark" href="posts.html">Home</a>
+                  </li>
+  
+                  <li class="nav-item">
+                    <a class="nav-link text-dark" href="profile.html">My Posts</a>
+                  </li>
+  
+                  <li class="nav-item">
+                    <a class="nav-link text-dark" href="register.html">Sign Up</a>
+                  </li>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" onclick="logout()" href="index.html"> <span>Logout</span></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer text-center py-2">
+                <a class="btn btn-link btn-sm" href="profile.html">View Profile</a>
+              </div>
+            </div>
+          </div>
+        
+
+        <!-- Main Content -->
+        <div class="col-md-6">
+          <!-- Alert -->
+          <div class="alert alert-success alert-dismissible fade show" role="alert">
+            Idea created successfully!
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+<!-- Post Box -->
+<div class="card bg-light-purple text-dark">
+  <div class="card-body">
+    <h4 class="card-title">Write a Post!</h4>
+    <!-- Form for Posting -->
+    <form id="postForm" onsubmit="addPost(event)">
+      <textarea
+        class="form-control mb-3"
+        id="tweetInput"
+        rows="3"
+        placeholder="What's on your mind?"
+        required
+      ></textarea>
+      <button type="submit" class="btn btn-purple w-100">Share</button>
+    </form>
+  </div>
+</div>
+
+          <hr />
+         
+            <!-- Post 1 -->
+  <div class="card mb-3 bg-light-purple text-dark">
+    <div class="card-body">
+      <h5 class="card-title">@kevinelong@gmail.com:</h5>
+      <p class="card-text">This is my first post!</p>
+      <div class="d-flex justify-content-between">
+        <button class="btn btn-sm btn-purple">Like</button>
+        <a href="like" class="fw-light">55 Likes</a>
+        <small class="text-muted">Posted on 2024-12-18</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- Post 2 -->
+  <div class="card mb-3 bg-light-purple text-dark">
+    <div class="card-body">
+      <h5 class="card-title">@JaneSmith</h5>
+      <p class="card-text">Loving this microblog!</p>
+      <div class="d-flex justify-content-between">
+        <button class="btn btn-sm btn-purple">Like</button>
+        <a href="like" class="fw-light">55 Likes</a>
+        <small class="text-muted">Posted on 2024-12-17</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- Post 3 -->
+  <div class="card mb-3 bg-light-purple text-dark">
+    <div class="card-body">
+      <h5 class="card-title">@TechGuru</h5>
+      <p class="card-text">Check out my latest project.</p>
+      <div class="d-flex justify-content-between">
+        <button class="btn btn-sm btn-purple">Like</button>
+        <a href="like" class="fw-light">55 Likes</a>
+        <small class="text-muted">Posted on 2024-12-16</small>
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+        
+
+        <!-- Right Sidebar -->
+        <div class="col-md-3">
+          <!-- Search Box -->
+          <div class="card bg-dark-purple text-light">
+            <div class="card-body">
+              <h5 class="card-title">Search</h5>
+              <input placeholder="Search..." class="form-control mb-2" type="text" id="search" />
+              <button class="btn btn-light-purple w-100">Search</button>
+            </div>
+          </div>
+
+        
+
+    <!-- Page-specific code -->
+    <script src="posts.js"></script>
+  </body>
+</html>

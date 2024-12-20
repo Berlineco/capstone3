@@ -1,0 +1,154 @@
+/* Global CSS for all pages */
+
+* {
+  /* Sizing helper: See Workbook 1b, page 2-33. */
+  box-sizing: border-box;
+
+  /* 
+       Vizualization helper: While styling or debugging your HTML & CSS, 
+       uncomment the rule below to see all the boxes on your page more
+       clearly! (Remove this outline before submitting: users won't 
+       want to see it!)
+    */
+  /* outline: 1px dotted red; */
+}
+
+:root {
+  font-size: 1rem;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+textarea,
+button {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+.bg-purple {
+  background-color: #6a0dad;
+}
+
+.bg-light-purple {
+  background-color: #d8b8ff;
+}
+
+.bg-dark-purple {
+  background-color: #4b0082;
+}
+
+.btn-purple {
+  background-color: #6a0dad;
+  color: white;
+}
+
+.btn-light-purple {
+  background-color: #d8b8ff;
+  color: #4b0082;
+}
+
+.btn-purple:hover,
+.btn-light-purple:hover {
+  opacity: 0.9;
+}
+
+.card {
+  border: none;
+  border-radius: 15px;
+}
+body {
+  background-color: #f9f0ff;
+}
+
+.navbar {
+  background-color: #6a0dad !important;
+}
+
+.navbar-brand {
+  color: #ffffff !important;
+}
+
+.navbar-nav .nav-link {
+  color: #d1c4e9 !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffffff !important;
+}
+
+.form-control {
+  border: 2px solid #a785dd;
+  border-radius: 10px;
+}
+
+.btn-primary {
+  background-color: #6a0dad;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #4b007d;
+}
+
+.btn-google {
+  background-color: #db4437;
+  color: #ffffff;
+  border: none;
+}
+
+.btn-google:hover {
+  background-color: #b53129;
+}
+
+.btn-apple {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+}
+
+.btn-apple:hover {
+  background-color: #333333;
+}
+
+.rounded-box {
+  border: 2px solid #6a0dad;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #ffffff;
+}
